@@ -8,7 +8,7 @@
 PC側にはUSB接続のToCoStickを刺しておいて、
 名札掛の方にはTWE-Lite DIPを貼っておきます。
 
-![画像]()
+![画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/PresenceLed.jpg)
 
 ## 動作
 5分おきにTWE-Lite DIPからToCoStickに送信。
@@ -86,7 +86,7 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 5分おき(warm boot,)通信と3秒おき(warm boot,)LED点灯は実現できました。
 が、サイズが大きいので、太陽電池は断念してコイン電池に変更。
 
-![AM-1816CA使用画像]()
+![AM-1816CA使用画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/PresenceLedSolar.jpg)
 
 (AM-1815CAであれば、5秒おきのcold boot・通信・LED点灯なら行けそうでしたが、
 5秒おきだと、点滅しているか見たい時に少し待つ必要があるのでいまいち)。
@@ -132,55 +132,8 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 パターンをはがしてしまったりしたので、
 [DIPタイプのTWE-Lite](http://www.tocos-wireless.com/jp/products/TWE-Lite-DIP/)に変更。
 
-![SMDタイプ画像]()
+![SMDタイプ画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/PresenceLedSMD.jpg)
 
 TWE-EH-S用や独自アプリ書き込み用の引き出し線もはんだ付けしたので見苦しくなってます。
 手ごろなソケットがあったりしないかと思ったけど見つけられず、
 ICテストクリップあたりを使うのがいいのかとも思ったり。
-
-<!--
-* 鈴商で低電流対応のLEDを購入。
-
-* 結晶系。屋内ではほとんど発電されないので使えず。
- * [太陽電池パネル [SBP68X26]](http://www.aitendo.com/product/7408)
- * [Adafruitの太陽電池バッジ](http://www.switch-science.com/catalog/932/)
- * [携帯機器用ソーラーモジュール 300mW](http://akizukidenshi.com/catalog/g/gM-06564/)
-* 屋内でも使えるもの。アモルファスシリコン系等
- * 
-http://www.powerfilmsolar.com/products/oem-comparison-chart/
- * [SP4.2-37](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=3CGN-SSMU) (千石電商)
-   ぺらぺら
- * [MPT3.6-75](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=5CFN-TSMT)
-   MPT3.6-75は、少し暗いと使えない印象。同じ場所でもSP4.2-37ならOK。
-   明るいとしっかり出力があるようだけど。
-  * [SP3-37](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=8CFN-SSMP)
-  * [MP3-25](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-047P)
-    夜になると使えなくなる。
-
- * [BP-617K09](http://www.wakamatsu-net.com/cgibin/biz/pageshousai.cgi?code=39030015&CATE=3903) (若松通商)
-   基盤上。ガラスではないので扱いやすい印象。SC-3722-9と同程度。
- * [SC-3722-9](http://wingsolar.shop-pro.jp/?pid=34934897)
-   ぐぐると、千石電商で売っているソーラーLEDライトに使われているようなので、
-   そっちを買って分解して使う方が早いかもしれません。
- * 屋内用。ガラスなので取り扱いに少し気を使う。
-  * (デンシ電気店)
-   * [SINONAR SS9719(3V/25uA)](http://www.denshi-trade.co.jp/ct/index.php?main_page=product_info&cPath=103_129_659&products_id=6559)
-   * [SINONAR SS-6728(5V/15uA)](http://www.denshi-trade.co.jp/ct/index.php?main_page=product_info&cPath=103_129_659&products_id=6558)
-  * http://panasonic.net/energy/amorton/jp/products/index.html
-    RSオンラインで通販。
-   * AM-1805CA
-   * AM-1815CA
-   * AM-1816CA
-
-出退表示
-名札掛
-http://www.ito-jimuki.com/23_516.html
-
-* 会議室のプレゼンス情報表示
- * 会議室が使用中かどうかを、会議室外向けに表示。
- * 次の予約時刻が近付いたことを示すカラータイマーを会議室内向けに表示
-   (人ごとのカラータイマー表示を行う[PresenceStick](https://github.com/deton/presencestick)同様)
- * 会議参加者全体の雰囲気の表示。場の空気の見える化。
-   個々の人のプレゼンスはPresenceStickで、
-   それを集計した全体の雰囲気を示すプレゼンスを表示。
--->
