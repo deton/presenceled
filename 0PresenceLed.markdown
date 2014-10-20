@@ -8,7 +8,7 @@
 PC側にはUSB接続のToCoStickを刺しておいて、
 名札掛の方にはTWE-Lite DIPを貼っておきます。
 
-![画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/PresenceLed.jpg)
+![画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/8a9ebae029be56366d1efbfc50a81843b3ce0b57/PresenceLed.jpg)
 
 ## 動作
 5分おきにTWE-Lite DIPからToCoStickに送信。
@@ -86,7 +86,7 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 5分おき(warm boot,)通信と3秒おき(warm boot,)LED点灯は実現できました。
 が、サイズが大きいので、太陽電池は断念してコイン電池に変更。
 
-![AM-1816CA使用画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/PresenceLedSolar.jpg)
+![AM-1816CA使用画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/3f90ec74bcf286f2cd9ad22cbe59d650cb10cebb/PresenceLedSMD.jpg)
 
 (AM-1815CAであれば、5秒おきのcold boot・通信・LED点灯なら行けそうでしたが、
 5秒おきだと、点滅しているか見たい時に少し待つ必要があるのでいまいち)。
@@ -132,7 +132,7 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 パターンをはがしてしまったりしたので、
 [DIPタイプのTWE-Lite](http://www.tocos-wireless.com/jp/products/TWE-Lite-DIP/)に変更。
 
-![SMDタイプ画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/PresenceLedSMD.jpg)
+![SMDタイプ画像](https://gist.github.com/deton/f6e3f79ff63f1ae6ab64/raw/f3eaa77e627399fbe42f6b70bb2cdc829474f908/PresenceLedSolar.jpg)
 
 TWE-EH-S用や独自アプリ書き込み用の引き出し線もはんだ付けしたので見苦しくなってます。
 手ごろなソケットがあったりしないかと思ったけど見つけられず、
