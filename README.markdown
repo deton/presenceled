@@ -86,7 +86,7 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 5分おき(warm boot,)通信と3秒おき(warm boot,)LED点灯は実現できました。
 が、サイズが大きいので、太陽電池は断念してコイン電池に変更。
 
-![AM-1816CA使用画像](https://github.com/deton/presenceled/raw/master/PresenceLedSMD.jpg)
+![AM-1816CA使用画像](https://github.com/deton/presenceled/raw/master/PresenceLedSolar.jpg)
 
 (AM-1815CAであれば、5秒おきのcold boot・通信・LED点灯なら行けそうでしたが、
 5秒おきだと、点滅しているか見たい時に少し待つ必要があるのでいまいち)。
@@ -132,7 +132,7 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 パターンをはがしてしまったりしたので、
 [DIPタイプのTWE-Lite](http://www.tocos-wireless.com/jp/products/TWE-Lite-DIP/)に変更。
 
-![SMDタイプ画像](https://github.com/deton/presenceled/raw/master/PresenceLedSolar.jpg)
+![SMDタイプ画像](https://github.com/deton/presenceled/raw/master/PresenceLedSMD.jpg)
 
 TWE-EH-S用や独自アプリ書き込み用の引き出し線もはんだ付けしたので見苦しくなってます。
 手ごろなソケットがあったりしないかと思ったけど見つけられず、
