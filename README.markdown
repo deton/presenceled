@@ -1,7 +1,7 @@
 # PresenceLed (出退表示LED)
 
 会社で使われている在・不在スライド付きの名札掛を、
-出勤時と退勤時に手で操作するのが面倒になったので、
+出勤時と退勤時に手で操作するのが面倒になったのと、たまに操作するのを忘れるので、
 自席PCの電源が入っている間だけLEDを点滅表示するものを作りました。
 
 [TWE-Lite](http://www.tocos-wireless.com/jp/products/TWE-Lite-DIP/)(ZigBee)を使用。
