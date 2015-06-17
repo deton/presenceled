@@ -3,6 +3,7 @@
 会社で使われている在・不在スライド付きの名札掛を、
 出勤時と退勤時に手で操作するのが面倒になったのと、たまに操作するのを忘れるので、
 自席PCの電源が入っている間だけLEDを点滅表示するものを作りました。
+([サーボモータを使った版](https://github.com/deton/syuttaikin))
 
 [TWE-Lite](http://www.tocos-wireless.com/jp/products/TWE-Lite-DIP/)(ZigBee)を使用。
 PC側にはUSB接続のToCoStickを刺しておいて、
@@ -26,8 +27,8 @@ LEDを3秒おきに一瞬(8ms)点灯。
 ## 部品
 * [TWE-Lite DIP](http://tocos-wireless.com/jp/products/TWE-Lite-DIP/)
 * LED (低電流。太陽電池動作時は2.0V程度の場合もあるので赤色。鈴商で購入)
-* 抵抗 10kΩ。太陽電池で動かそうとして、電流量を減らすため少し大きめ。
-  LEDが少し暗め
+* 抵抗 4.7kΩ。太陽電池で動かそうとして、電流量を減らすため少し大きめ。
+  LEDが少し暗め。(最初は10kΩにしていたが少し暗すぎたので変更)
 * [CR2032型コイン電池ホルダ(表面実装型)](http://www.switch-science.com/catalog/47/)
 * [ToCoStick (TWE-Lite USB)](http://tocos-wireless.com/jp/products/TWE-Lite-USB/)
 
@@ -91,10 +92,10 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 (AM-1815CAであれば、5秒おきのcold boot・通信・LED点灯なら行けそうでしたが、
 5秒おきだと、点滅しているか見たい時に少し待つ必要があるのでいまいち)。
 
-[TWE-EH-S](http://tocos-wireless.com/jp/products/TWE-EH-S/)で
+[TWE-EH Solar](http://tocos-wireless.com/jp/products/TWE-EH-S/)で
 目安として挙げられているのは「開放電圧4V~6V、最大出力電力300mW以下」。
 
-* AM-5815。TWE-EH-S推奨ソーラーパネル
+* AM-5815。TWE-EH Solar推奨ソーラーパネル
   現場では50秒間隔での送信は可能。センサとして使うならこれで十分かも。
 * 結晶系。屋内ではほとんど発電されないので使えず。
   [aitendo 5.5V/50mA](http://www.aitendo.com/product/7408),
@@ -134,6 +135,6 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 
 ![SMDタイプ画像](https://github.com/deton/presenceled/raw/master/PresenceLedSMD.jpg)
 
-TWE-EH-S用や独自アプリ書き込み用の引き出し線もはんだ付けしたので見苦しくなってます。
+TWE-EH Solar用や独自アプリ書き込み用の引き出し線もはんだ付けしたので見苦しくなってます。
 手ごろなソケットがあったりしないかと思ったけど見つけられず、
 ICテストクリップあたりを使うのがいいのかとも思ったり。
