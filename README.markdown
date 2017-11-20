@@ -3,7 +3,8 @@
 会社で使われている在・不在スライド付きの名札掛を、
 出勤時と退勤時に手で操作するのが面倒になったのと、たまに操作するのを忘れるので、
 自席PCの電源が入っている間だけLEDを点滅表示するものを作りました。
-([サーボモータを使った版](https://github.com/deton/syuttaikin))
+(その後作ったもの: [電子ペーパーを使った版](epd)、
+[サーボモータを使った版](https://github.com/deton/syuttaikin))
 
 [TWE-Lite](http://www.tocos-wireless.com/jp/products/TWE-Lite-DIP/)(ZigBee)を使用。
 PC側にはUSB接続のToCoStickを刺しておいて、
@@ -78,6 +79,7 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
 * 名札掛全体を電子化して全員分の情報取得・表示。
   各人の出退表示LEDを貼り付けることになると面倒なので。
 * 電子ペーパー化して電源を切っても状態が保存されるようにする
+  →[電子ペーパーを使った版](epd)
 * 元の名札掛のスライド板をモータ等で物理的にスライドさせる
 
 ## 参考: 太陽電池
@@ -102,29 +104,29 @@ WiFi接続のノートPCやスマホが20台以上はありそうな環境。
   [switch-science 5V/40mA](http://www.switch-science.com/catalog/932/),
   [秋月電子通商 4.5V/65mA](http://akizukidenshi.com/catalog/g/gM-06564/)
 * アモルファスシリコン系。屋内で使うため。
- * 千石電商で
-   [PowerFilm](http://www.powerfilmsolar.com/products/oem-comparison-chart/)
-   社のぺらぺらなものを何種類か購入。
-   屋内の場合、問題なく使える日もあるが、全然駄目な日もあり。
-   また、使えている日でも、夜になると使えなくなる。
-   [SP4.2-37](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=3CGN-SSMU),
-   [MPT3.6-75](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=5CFN-TSMT),
-   [SP3-37](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=8CFN-SSMP),
-   [MP3-25](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-047P)。
-   (MPT3.6-75は、明るいとしっかり出力があるが、少し暗いと使えない印象。
-   同じ場所でもSP4.2-37ならOK。)
- * [BP-617K09](http://www.wakamatsu-net.com/cgibin/biz/pageshousai.cgi?code=39030015&CATE=3903) (若松通商)
-   ガラスではないので扱いやすい印象。SC-3722-9と同程度。
- * [SC-3722-9](http://wingsolar.shop-pro.jp/?pid=34934897)
- * 屋内用を使わないと駄目なのかも、ということで屋内用を購入。
-   ガラスなので取り扱いに少し気を使う。
-   RSオンライン通販で[Panasonic](http://panasonic.net/energy/amorton/jp/products/index.html)のを何種類か購入。
-   [AM-1805CA](http://jp.rs-online.com/web/p/photovoltaic-solar-panels/7600216/),
-   [AM-1815CA](http://jp.rs-online.com/web/p/photovoltaic-solar-panels/6646778/),
-   [AM-1816CA](http://jp.rs-online.com/web/p/photovoltaic-solar-panels/6646772/)。
-   デンシ電気店通販:
-   [SINONAR SS9719(3V/25uA)](http://www.denshi-trade.co.jp/ct/index.php?main_page=product_info&cPath=103_129_659&products_id=6559),
-   [SINONAR SS-6728(5V/15uA)](http://www.denshi-trade.co.jp/ct/index.php?main_page=product_info&cPath=103_129_659&products_id=6558)。
+    * 千石電商で
+      [PowerFilm](http://www.powerfilmsolar.com/products/oem-comparison-chart/)
+      社のぺらぺらなものを何種類か購入。
+      屋内の場合、問題なく使える日もあるが、全然駄目な日もあり。
+      また、使えている日でも、夜になると使えなくなる。
+      [SP4.2-37](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=3CGN-SSMU),
+      [MPT3.6-75](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=5CFN-TSMT),
+      [SP3-37](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=8CFN-SSMP),
+      [MP3-25](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-047P)。
+      (MPT3.6-75は、明るいとしっかり出力があるが、少し暗いと使えない印象。
+      同じ場所でもSP4.2-37ならOK。)
+    * [BP-617K09](http://www.wakamatsu-net.com/cgibin/biz/pageshousai.cgi?code=39030015&CATE=3903) (若松通商)
+      ガラスではないので扱いやすい印象。SC-3722-9と同程度。
+    * [SC-3722-9](http://wingsolar.shop-pro.jp/?pid=34934897)
+    * 屋内用を使わないと駄目なのかも、ということで屋内用を購入。
+      ガラスなので取り扱いに少し気を使う。
+      RSオンライン通販で[Panasonic](http://panasonic.net/energy/amorton/jp/products/index.html)のを何種類か購入。
+      [AM-1805CA](http://jp.rs-online.com/web/p/photovoltaic-solar-panels/7600216/),
+      [AM-1815CA](http://jp.rs-online.com/web/p/photovoltaic-solar-panels/6646778/),
+      [AM-1816CA](http://jp.rs-online.com/web/p/photovoltaic-solar-panels/6646772/)。
+      デンシ電気店通販:
+      [SINONAR SS9719(3V/25uA)](http://www.denshi-trade.co.jp/ct/index.php?main_page=product_info&cPath=103_129_659&products_id=6559),
+      [SINONAR SS-6728(5V/15uA)](http://www.denshi-trade.co.jp/ct/index.php?main_page=product_info&cPath=103_129_659&products_id=6558)。
 
 ## SMDタイプのTWE-Lite
 最初は、
